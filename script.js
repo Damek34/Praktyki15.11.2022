@@ -118,5 +118,38 @@ function zadanie3(array)
 
 }
 
+
+function logarytm()
+{
+    var liczba = parseInt(document.getElementById("liczbaLog").value);//const podstawa = 2;
+    var licz = 2;
+
+
+    if(liczba == 1)
+    {
+        document.getElementById("wynikLog").innerHTML = "Wynik to 0";
+    }
+    else
+    {
+        for(let i = 1; i < liczba; i++)
+    {
+        
+        if(licz == liczba)
+        {
+            document.getElementById("wynikLog").innerHTML = "Wynik to " + i;
+            break;
+        }
+        licz *= 2;
+    }
+    }
+
+    
+
+
+}
+
+
+
+
 document.getElementById("wynik3").innerHTML = "Druga największa liczba z tablicy to: " + zadanie3(tab1);
 document.getElementById("wynik4").innerHTML = "Drugi największy element tablicy to: " + zadanie3(tab2);
