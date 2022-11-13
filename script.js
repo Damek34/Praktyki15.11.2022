@@ -1,3 +1,11 @@
+var tab1 = [1, 5 , 34, 10, 0, 5];
+var tab2 = ["Alicja", "Robert", "Pomścibor", "Adam", "Aleksandra"];
+
+
+
+
+
+
 function dodaj()
 {
     var liczba1 = parseInt(document.getElementById("liczba1").value);
@@ -64,8 +72,51 @@ function palindrome()
     {
         document.getElementById("wynik2").innerHTML = "Słowo nie jest palindromem";
     }
+}
 
-    
+function zadanie3(array)
+{
+    var max = array[0];
+    var max2;
 
+        if(typeof(array[0]) === "number")
+        {
+
+         for(let i = 1; i < array.length; i++)
+            {
+               if(array[i] > max)
+                {
+                max2 = max;
+                max = array[i];
+                }
+                
+                if(array[i] > max2 && array[i] < max)
+                {
+                    max2 = array[i]
+                }
+            }
+        } 
+         
+
+        if(typeof(array[0]) ==="string")
+        {
+            max2 = "";
+            for(let i = 1; i < array.length; i++)
+            {
+                if(array[i].length > max.length)
+                {
+                    max2 = max;
+                    max = array[i];
+                }
+                if(array[i].length > max2.length && array[i].length < max.length)
+                {
+                    max2 = array[i]
+                }
+            }
+        }
+    return max2;
 
 }
+
+document.getElementById("wynik3").innerHTML = "Druga największa liczba z tablicy to: " + zadanie3(tab1);
+document.getElementById("wynik4").innerHTML = "Drugi największy element tablicy to: " + zadanie3(tab2);
