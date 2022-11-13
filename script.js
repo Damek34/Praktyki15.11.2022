@@ -149,6 +149,34 @@ function logarytm()
 }
 
 
+function potegowanie()
+{
+    var podstawa = parseInt(document.getElementById("liczbaPotega").value);
+    var wykladnik = parseInt(document.getElementById("Wykladnik").value);
+    
+    var wynik = potegowanieOblicz(podstawa, wykladnik);
+    document.getElementById("wynikPotegowania").innerHTML = "Wynik potęgowania to: " + wynik;
+
+}
+
+function potegowanieOblicz(podstawa, wykladnik)
+{
+    if(wykladnik == 0)
+    {
+        return 1;
+    }
+
+    else
+    {
+        return podstawa*potegowanieOblicz(podstawa, wykladnik-1);
+    }
+
+    
+}
+
+
+
+
 
 
 document.getElementById("wynik3").innerHTML = "Druga największa liczba z tablicy to: " + zadanie3(tab1);
