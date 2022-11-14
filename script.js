@@ -175,6 +175,36 @@ function potegowanieOblicz(podstawa, wykladnik)
 }
 
 
+function minimumMax()
+{
+    var liczbyString = document.getElementById("minMax").value;
+    var liczby = liczbyString.split(";");
+
+    var max = liczby[0];
+    var min = liczby[0];
+
+
+    for(let i = 0; i < liczby.length; i++)
+    {
+        liczby[i] = parseFloat(liczby[i]);
+    }
+
+
+    for(let i = 1; i < liczby.length; i++)
+    {
+        if(liczby[i] > max)
+        {
+            max = liczby[i];
+        }
+        if(liczby[i] < min)
+        {
+            min = liczby[i];
+        }
+    }
+
+    document.getElementById("wynikminmax").innerHTML = "Największa liczba ze zbioru to " + max + ", a najmniejsza to " + min;
+}
+
 
 
 
